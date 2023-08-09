@@ -6,15 +6,7 @@ pipeline {
   }
 
   agent any
-
-  stages {
-
-    stage('Checkout Source') {
-      steps {
-        git 'https://github.com/sreeajin/jenkins-kubernetes-deployment.git'
-      }
-    }
-
+  
     stage('Build image') {
       steps{
         script {
