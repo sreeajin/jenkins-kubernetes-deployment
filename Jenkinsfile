@@ -35,7 +35,7 @@ pipeline {
         script { 
           withKubeConfig([credentialsId: 'k8config']) {
           //sh("kubectl apply -f auth.yaml -v=10")
-          sh("kubectl apply -f deployment.yaml")
+          sh("kubectl apply -f deployment.yaml -v=10")
           sh("kubectl apply -f service.yaml")
           //withKubeConfig(configs: "deployment.yaml", "service.yaml")
           }
